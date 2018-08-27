@@ -1,8 +1,8 @@
 import discord
 import os
 
-# bot gets it's token from the enviornment variable 'token'
-token = os.environ['token']
+# bot gets it's token from the environment variable 'token'
+# token = os.environ['token']
 client = discord.Client()
 
 @client.event
@@ -22,4 +22,4 @@ async def on_ready():
     print(client.user.id)
     print('------')
 
-client.run('token')
+client.run(os.environ['token'])
